@@ -219,6 +219,7 @@ body {
     .btn {
         padding: 24px 80px;
         width: 100%;
+        margin-bottom: 0;
     }
 
     #japanese {
@@ -237,7 +238,7 @@ body {
     }
 
     .spacer {
-        height: 10px;
+        height: 15px;
     }
 }
 
@@ -245,6 +246,7 @@ body {
     .btn {
         padding: 15px 60px;
         width: 100%;
+        margin-bottom: 0;
     }
 
     #japanese {
@@ -254,4 +256,5 @@ body {
     #lattin {
         font-size: 40px;
     }
+
 }
