@@ -557,6 +557,7 @@ const LIBRARY_LENGTH = LIBRARY.length
 
 const JAPANESE = document.getElementById("japanese")
 const LATTIN = document.getElementById("lattin")
+const PREV_BUTTON = document.getElementById("prev")
 const MODE_BUTTON = document.getElementById("mode")
 const SHOW_BUTTON = document.getElementById("show")
 const RANDOM_BUTTON = document.getElementById("random")
@@ -579,6 +580,15 @@ function randomNumber(range) {
 
 function randomWord() {
     return LIBRARY[randomNumber(LIBRARY_LENGTH)]
+}
+
+function prevWord() {
+    currentIndex = LIBRARY.findIndex((word) => currentWord == word)
+    if (currentIndex == 0) {
+        return LIBRARY[LIBRARY_LENGTH - 1]
+    } else {
+        return LIBRARY[currentIndex - 1]
+    }
 }
 
 function nextWord() {
@@ -667,6 +677,23 @@ function handle_random_press() {
     })
 }
 
+function handle_leftArrow_press() {
+    function func() {
+        currentWord = prevWord()
+        appendWord(currentWord[mode])
+        showLattin()
+    }
+    PREV_BUTTON.addEventListener("click", () => {
+        func()
+    })
+    window.addEventListener("keydown", (e) => {
+        if (e.key == "ArrowLeft") {
+            splashButton(PREV_BUTTON)
+            func()
+        }
+    })
+}
+
 function handle_rightArrow_press() {
     function func() {
         currentWord = nextWord()
@@ -706,6 +733,7 @@ function run() {
     handle_showLattin_press()
     handle_mode_press()
     handle_random_press()
+    handle_leftArrow_press()
     handle_rightArrow_press()
     openModal()
     closeModal()
