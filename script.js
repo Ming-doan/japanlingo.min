@@ -1,6 +1,7 @@
 // Global Variables
 
 const LIBRARY = [
+    // -
     {
         hiragana: 'あ',
         katakana: 'ア',
@@ -26,6 +27,7 @@ const LIBRARY = [
         katakana: 'オ',
         romaji: 'o'
     },
+    // K
     {
         hiragana: 'か',
         katakana: 'カ',
@@ -51,6 +53,504 @@ const LIBRARY = [
         katakana: 'コ',
         romaji: 'ko'
     },
+    // S
+    {
+        hiragana: 'さ',
+        katakana: 'サ',
+        romaji: 'sa'
+    },
+    {
+        hiragana: 'し',
+        katakana: 'シ',
+        romaji: 'shi'
+    },
+    {
+        hiragana: 'す',
+        katakana: 'ス',
+        romaji: 'su'
+    },
+    {
+        hiragana: 'せ',
+        katakana: 'セ',
+        romaji: 'se'
+    },
+    {
+        hiragana: 'そ',
+        katakana: 'ソ',
+        romaji: 'so'
+    },
+    // T
+    {
+        hiragana: 'た',
+        katakana: 'タ',
+        romaji: 'ta'
+    },
+    {
+        hiragana: 'ち',
+        katakana: 'チ',
+        romaji: 'chi'
+    },
+    {
+        hiragana: 'つ',
+        katakana: 'ツ',
+        romaji: 'tsu'
+    },
+    {
+        hiragana: 'て',
+        katakana: 'テ',
+        romaji: 'te'
+    },
+    {
+        hiragana: 'と',
+        katakana: 'ト',
+        romaji: 'to'
+    },
+    // N
+    {
+        hiragana: 'な',
+        katakana: 'ナ',
+        romaji: 'na'
+    },
+    {
+        hiragana: 'に',
+        katakana: 'ニ',
+        romaji: 'ni'
+    },
+    {
+        hiragana: 'ぬ',
+        katakana: 'ヌ',
+        romaji: 'nu'
+    },
+    {
+        hiragana: 'ね',
+        katakana: 'ネ',
+        romaji: 'ne'
+    },
+    {
+        hiragana: 'の',
+        katakana: 'ノ',
+        romaji: 'no'
+    },
+    // H
+    {
+        hiragana: 'は',
+        katakana: 'ハ',
+        romaji: 'ha'
+    },
+    {
+        hiragana: 'ひ',
+        katakana: 'ヒ',
+        romaji: 'hi'
+    },
+    {
+        hiragana: 'ふ',
+        katakana: 'フ',
+        romaji: 'fu'
+    },
+    {
+        hiragana: 'へ',
+        katakana: 'ヘ',
+        romaji: 'he'
+    },
+    {
+        hiragana: 'ほ',
+        katakana: 'ホ',
+        romaji: 'ho'
+    },
+    // M
+    {
+        hiragana: 'ま',
+        katakana: 'マ',
+        romaji: 'ma'
+    },
+    {
+        hiragana: 'み',
+        katakana: 'ミ',
+        romaji: 'mi'
+    },
+    {
+        hiragana: 'む',
+        katakana: 'ム',
+        romaji: 'mu'
+    },
+    {
+        hiragana: 'め',
+        katakana: 'メ',
+        romaji: 'me'
+    },
+    {
+        hiragana: 'も',
+        katakana: 'モ',
+        romaji: 'mo'
+    },
+    // Y
+    {
+        hiragana: 'や',
+        katakana: 'ヤ',
+        romaji: 'ya'
+    },
+    {
+        hiragana: 'ゆ',
+        katakana: 'ユ',
+        romaji: 'yu'
+    },
+    {
+        hiragana: 'よ',
+        katakana: 'ヨ',
+        romaji: 'yo'
+    },
+    // R
+    {
+        hiragana: 'ら',
+        katakana: 'ラ',
+        romaji: 'ra'
+    },
+    {
+        hiragana: 'り',
+        katakana: 'チ',
+        romaji: 'ri'
+    },
+    {
+        hiragana: 'る',
+        katakana: 'ル',
+        romaji: 'ru'
+    },
+    {
+        hiragana: 'れ',
+        katakana: 'レ',
+        romaji: 're'
+    },
+    {
+        hiragana: 'ろ',
+        katakana: 'ロ',
+        romaji: 'ro'
+    },
+    // W
+    {
+        hiragana: 'わ',
+        katakana: 'ワ',
+        romaji: 'wa'
+    },
+    {
+        hiragana: 'を',
+        katakana: 'ヲ',
+        romaji: 'o'
+    },
+    // --
+    {
+        hiragana: 'ん',
+        katakana: 'ン',
+        romaji: 'n,m'
+    },
+
+    // G
+    {
+        hiragana: 'が',
+        katakana: 'ガ',
+        romaji: 'ga'
+    },
+    {
+        hiragana: 'ぎ',
+        katakana: 'ギ',
+        romaji: 'gi'
+    },
+    {
+        hiragana: 'ぐ',
+        katakana: 'グ',
+        romaji: 'gu'
+    },
+    {
+        hiragana: 'げ',
+        katakana: 'ゲ',
+        romaji: 'ge'
+    },
+    {
+        hiragana: 'ご',
+        katakana: 'ゴ',
+        romaji: 'go'
+    },
+    // Z
+    {
+        hiragana: 'ざ',
+        katakana: 'ザ',
+        romaji: 'za'
+    },
+    {
+        hiragana: 'じ',
+        katakana: 'ジ',
+        romaji: 'ji'
+    },
+    {
+        hiragana: 'ず',
+        katakana: 'ズ',
+        romaji: 'zu'
+    },
+    {
+        hiragana: 'ぜ',
+        katakana: 'ゼ',
+        romaji: 'ze'
+    },
+    {
+        hiragana: 'ぞ',
+        katakana: 'ゾ',
+        romaji: 'zo'
+    },
+    // D
+    {
+        hiragana: 'だ',
+        katakana: 'ダ',
+        romaji: 'da'
+    },
+    {
+        hiragana: 'ぢ',
+        katakana: 'ヂ',
+        romaji: 'ji'
+    },
+    {
+        hiragana: 'づ',
+        katakana: 'ヅ',
+        romaji: 'zu'
+    },
+    {
+        hiragana: 'で',
+        katakana: 'デ',
+        romaji: 'ze'
+    },
+    {
+        hiragana: 'ど',
+        katakana: 'ド',
+        romaji: 'zo'
+    },
+    // B
+    {
+        hiragana: 'ば',
+        katakana: 'バ',
+        romaji: 'ba'
+    },
+    {
+        hiragana: 'び',
+        katakana: 'ビ',
+        romaji: 'bi'
+    },
+    {
+        hiragana: 'ぶ',
+        katakana: 'ブ',
+        romaji: 'bu'
+    },
+    {
+        hiragana: 'べ',
+        katakana: 'ベ',
+        romaji: 'be'
+    },
+    {
+        hiragana: 'ぼ',
+        katakana: 'ボ',
+        romaji: 'bo'
+    },
+    // P
+    {
+        hiragana: 'ぱ',
+        katakana: 'パ',
+        romaji: 'pa'
+    },
+    {
+        hiragana: 'ぴ',
+        katakana: 'ピ',
+        romaji: 'pi'
+    },
+    {
+        hiragana: 'ぷ',
+        katakana: 'プ',
+        romaji: 'pu'
+    },
+    {
+        hiragana: 'ぺ',
+        katakana: 'ペ',
+        romaji: 'pe'
+    },
+    {
+        hiragana: 'ぽ',
+        katakana: 'ポ',
+        romaji: 'po'
+    },
+
+    // âm ghép K
+    {
+        hiragana: 'きゃ',
+        katakana: 'キャ',
+        romaji: 'kya'
+    },
+    {
+        hiragana: 'きゅ',
+        katakana: 'キュ',
+        romaji: 'kyu'
+    },
+    {
+        hiragana: 'きょ',
+        katakana: 'キョ',
+        romaji: 'kyo'
+    },
+    // âm ghép SH
+    {
+        hiragana: 'しゃ',
+        katakana: 'シャ',
+        romaji: 'sha'
+    },
+    {
+        hiragana: 'しゅ',
+        katakana: 'シュ',
+        romaji: 'shu'
+    },
+    {
+        hiragana: 'しょ',
+        katakana: 'ショ',
+        romaji: 'sho'
+    },
+    // âm ghép CH
+    {
+        hiragana: 'ちゃ',
+        katakana: 'チャ',
+        romaji: 'cha'
+    },
+    {
+        hiragana: 'ちゅ',
+        katakana: 'チュ',
+        romaji: 'chu'
+    },
+    {
+        hiragana: 'ちょ',
+        katakana: 'チョ',
+        romaji: 'cho'
+    },
+    // âm ghép N
+    {
+        hiragana: 'にゃ',
+        katakana: 'ニャ',
+        romaji: 'nya'
+    },
+    {
+        hiragana: 'にゅ',
+        katakana: 'ニュ',
+        romaji: 'nyu'
+    },
+    {
+        hiragana: 'にょ',
+        katakana: 'ニョ',
+        romaji: 'nyo'
+    },
+    // âm ghép H
+    {
+        hiragana: 'ひゃ',
+        katakana: 'ヒャ',
+        romaji: 'hya'
+    },
+    {
+        hiragana: 'ひゅ',
+        katakana: 'ヒュ',
+        romaji: 'hyu'
+    },
+    {
+        hiragana: 'ひょ',
+        katakana: 'ヒョ',
+        romaji: 'hyo'
+    },
+    // âm ghép M
+    {
+        hiragana: 'みゃ',
+        katakana: 'ミャ',
+        romaji: 'mya'
+    },
+    {
+        hiragana: 'みゅ',
+        katakana: 'ミュ',
+        romaji: 'myu'
+    },
+    {
+        hiragana: 'みょ',
+        katakana: 'ミョ',
+        romaji: 'myo'
+    },
+    // âm ghép R
+    {
+        hiragana: 'りゃ',
+        katakana: 'リャ',
+        romaji: 'rya'
+    },
+    {
+        hiragana: 'りゅ',
+        katakana: 'リュ',
+        romaji: 'ryu'
+    },
+    {
+        hiragana: 'りょ',
+        katakana: 'リョ',
+        romaji: 'ryo'
+    },
+    // âm ghép G
+    {
+        hiragana: 'ぎゃ',
+        katakana: 'ギャ',
+        romaji: 'gya'
+    },
+    {
+        hiragana: 'ぎゅ',
+        katakana: 'ギュ',
+        romaji: 'gyu'
+    },
+    {
+        hiragana: 'ぎょ',
+        katakana: 'ギョ',
+        romaji: 'gyo'
+    },
+    // âm ghép J
+    {
+        hiragana: 'じゃ',
+        katakana: 'ジャ',
+        romaji: 'ja'
+    },
+    {
+        hiragana: 'じゅ',
+        katakana: 'ジュ',
+        romaji: 'ju'
+    },
+    {
+        hiragana: 'じょ',
+        katakana: 'ジョ',
+        romaji: 'jo'
+    },
+    // âm ghép B
+    {
+        hiragana: 'びゃ',
+        katakana: 'ビャ',
+        romaji: 'bya'
+    },
+    {
+        hiragana: 'びゅ',
+        katakana: 'ビュ',
+        romaji: 'byu'
+    },
+    {
+        hiragana: 'びょ',
+        katakana: 'ビョ',
+        romaji: 'byo'
+    },
+    // âm ghép P
+    {
+        hiragana: 'ぴょ',
+        katakana: 'ピャ',
+        romaji: 'pya'
+    },
+    {
+        hiragana: 'ぴゅ',
+        katakana: 'ピュ',
+        romaji: 'pyu'
+    },
+    {
+        hiragana: 'ぴょ',
+        katakana: 'ピョ',
+        romaji: 'pyo'
+    },
+
 ]
 
 const LIBRARY_LENGTH = LIBRARY.length
