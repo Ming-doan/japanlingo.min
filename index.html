@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">Japanese Alphabet</div>
+        <div class="help" id="open-modal">
+            <svg id="question" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon line" width="32"
+                height="32">
+                <path id="primary" d="M21,12a9,9,0,1,1-9-9A9,9,0,0,1,21,12Zm-9,1c0-2,3-1,3-4S9,6,9,9"
+                    style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                </path>
+                <line id="primary-upstroke" x1="12.05" y1="17" x2="11.95" y2="17"
+                    style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.6;">
+                </line>
+            </svg>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="text" id="japanese"></div>
+            <div class="text" id="lattin">_</div>
+            <div class="action">
+                <div id="mode" class="btn">Turn to katakana</div>
+                <div class="spacer"></div>
+                <div id="show" class="btn">Show Romaji</div>
+                <div class="spacer"></div>
+                <div id="random" class="btn">Random Word</div>
+                <div class="spacer"></div>
+                <div id="next" class="btn">Next</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay open" id="overlay">
+        <div class="modal">
+            <div id="close-btn">&times</div>
+            <div class="heading">👉Contributors</div>
+            <div class="flex">
+                <div class="circle-avatar">
+                    <img src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t39.30808-1/277525623_766291427680727_6346271855986182651_n.jpg?stp=c125.257.270.270a_dst-jpg_p480x480&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=oi8ZMFYB-UMAX84sbgg&tn=pGtJNev4OWhyRugo&_nc_ht=scontent.fsgn2-2.fna&oh=00_AT8bpFdFK1_Uqw18W6ux4G71AW_PCdLHT2BDqlYRKfUYYg&oe=6323D1BC"
+                        alt="">
+                    Đoàn Quang Minh
+                </div>
+                <div class="circle-avatar">
+                    <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-1/287653056_3021463941477507_6280219495263812802_n.jpg?stp=dst-jpg_s320x320&_nc_cat=109&ccb=1-7&_nc_sid=7206a8&_nc_ohc=OTVDG4gLWjMAX9T2HZE&_nc_ht=scontent.fsgn2-4.fna&oh=00_AT-SUjnUl884A_GhEK-jQo8nDoduky8jMUVnkcGgQ-VvSg&oe=63233B86"
+                        alt="">
+                    Đào Ngọc Huy
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="heading">👉Shorthands</div>
+            <div class="content">
+                <span>Turn to Hiragana / Katakana</span>
+                <span>M</span>
+            </div>
+            <div class="content">
+                <span>Show Romaji</span>
+                <span>Space</span>
+            </div>
+            <div class="content">
+                <span>Random word</span>
+                <span>R</span>
+            </div>
+            <div class="content">
+                <span>Next word</span>
+                <span>Right Arrow</span>
+            </div>
+        </div>
+        <div class="modal-bg" id="modal-bg"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
