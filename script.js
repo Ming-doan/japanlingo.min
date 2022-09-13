@@ -812,6 +812,9 @@ function handle_mode_press() {
 
 function handle_random_press() {
     function func() {
+        currentFilter = FILTER[0]
+        setFilter()
+        appendFilter()
         currentWord = randomWord()
         appendWord(currentWord[mode])
         showLattin()
