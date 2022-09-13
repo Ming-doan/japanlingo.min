@@ -130,6 +130,10 @@ body {
     box-shadow: 5px 5px 0 0 #333;
 }
 
+.jp-font {
+    font-family: 'Shippori Mincho', serif;
+}
+
 #lattin {
     font-size: 30px;
     margin-bottom: 40px;
