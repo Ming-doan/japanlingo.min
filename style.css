@@ -131,6 +131,10 @@ body {
     box-shadow: 5px 5px 0 0 #333;
 }
 
+.jp-font {
+    font-family: 'Shippori Mincho', serif;
+}
+
 #lattin {
     font-size: 30px;
     margin-bottom: 40px;
@@ -246,9 +250,20 @@ body {
     }
 
     .btn {
-        padding: 24px 80px;
+        padding: 15px 60px;
         width: 100%;
         margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hoz-right,
+    .hoz-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 40px;
     }
 
     #japanese {
@@ -273,17 +288,22 @@ body {
 
 @media screen and (max-width: 376px) {
     .btn {
-        padding: 15px 60px;
+        padding: 12px 40px;
         width: 100%;
         margin-bottom: 0;
     }
 
     #japanese {
         font-size: 100px;
+        margin-bottom: 0;
     }
 
     #lattin {
         font-size: 40px;
+        margin-bottom: 0;
     }
 
+    .hoz-option {
+        margin-top: 25px;
+    }
 }

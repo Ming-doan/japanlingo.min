@@ -688,6 +688,7 @@ let mode = "hiragana"
 let isShowLattin = false
 let currentWord = LIBRARY[0]
 let currentFilter = FILTER[0]
+let isJPFont = false
 
 // Functions
 
@@ -697,6 +698,15 @@ function randomNumber(range) {
 
 function randomWord() {
     return LIBRARY[randomNumber(LIBRARY_LENGTH)]
+}
+
+function toggleJPFont() {
+    isJPFont = !isJPFont
+    if (isJPFont) {
+        JAPANESE.classList.add("jp-font")
+    } else {
+        JAPANESE.classList.remove("jp-font")
+    }
 }
 
 function prevWord() {
@@ -904,6 +914,17 @@ function handle_ctrl_leftArrow_press() {
     })
 }
 
+function handle_shift_enter_press() {
+    function func() {
+        toggleJPFont()
+    }
+    window.addEventListener("keydown", (e) => {
+        if (e.key == "Enter" && e.shiftKey) {
+            func()
+        }
+    })
+}
+
 function openModal() {
     OPEN_BUTTON.addEventListener('click', () => {
         OVERLAY.classList.add("open")
@@ -931,6 +952,7 @@ function run() {
     handle_rightArrow_press()
     handle_ctrl_rightArrow_press()
     handle_ctrl_leftArrow_press()
+    handle_shift_enter_press()
     openModal()
     closeModal()
 }
