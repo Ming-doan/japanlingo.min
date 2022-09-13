@@ -1,6 +1,6 @@
 // Global Variables
 
-const LIBRARY = [
+const GEN_LIBRARY = [
     // -
     {
         hiragana: 'あ',
@@ -553,10 +553,32 @@ const LIBRARY = [
 
 ]
 
-const LIBRARY_LENGTH = LIBRARY.length
+const FILTER = [
+    {
+        name: "No filter",
+        items: "nofilter"
+    },
+    {
+        name: "Vowels",
+        items: ["a", "i", "u", "e", "o"]
+    },
+    {
+        name: "K sets",
+        items: ["ka", "ki", "ku", "ke", "ko"]
+    },
+    {
+        name: "S sets",
+        items: ["sa", "shi", "tsu", "se", "so"]
+    },
+]
+
+const FILTER_LENGTH = FILTER.length
 
 const JAPANESE = document.getElementById("japanese")
 const LATTIN = document.getElementById("lattin")
+const FILTER_CONTAINER = document.getElementById("hoz-c")
+const NEXT_FILTER = document.getElementById("hoz-r")
+const PREV_FILTER = document.getElementById("hoz-l")
 const PREV_BUTTON = document.getElementById("prev")
 const MODE_BUTTON = document.getElementById("mode")
 const SHOW_BUTTON = document.getElementById("show")
@@ -568,9 +590,13 @@ const CLOSE_BUTTON = document.getElementById("close-btn")
 const OVERLAY = document.getElementById("overlay")
 const CLOSE_BG = document.getElementById("modal-bg")
 
+let LIBRARY = GEN_LIBRARY
+let LIBRARY_LENGTH = LIBRARY.length
+
 let mode = "hiragana"
 let isShowLattin = false
 let currentWord = LIBRARY[0]
+let currentFilter = FILTER[0]
 
 // Functions
 
@@ -600,6 +626,24 @@ function nextWord() {
     }
 }
 
+function prevFilter() {
+    currentIndex = FILTER.findIndex((filter) => currentFilter == filter)
+    if (currentIndex == 0) {
+        return FILTER[FILTER_LENGTH - 1]
+    } else {
+        return FILTER[currentIndex - 1]
+    }
+}
+
+function nextFilter() {
+    currentIndex = FILTER.findIndex((filter) => currentFilter == filter)
+    if (currentIndex >= FILTER_LENGTH - 1) {
+        return FILTER[0]
+    } else {
+        return FILTER[currentIndex + 1]
+    }
+}
+
 function appendWord(word) {
     JAPANESE.innerHTML = word
 }
@@ -610,6 +654,21 @@ function showLattin() {
     } else {
         LATTIN.innerText = "_"
     }
+}
+
+function appendFilter() {
+    FILTER_CONTAINER.innerHTML = `Filter: ${currentFilter.name}`
+}
+
+function setFilter() {
+    wordFilter = currentFilter.items
+    LIBRARY = GEN_LIBRARY.filter((word) => {
+        if (wordFilter == "nofilter") {
+            return true
+        }
+        return currentFilter.items.includes(word.romaji)
+    })
+    LIBRARY_LENGTH = LIBRARY.length
 }
 
 function switchMode() {
@@ -687,7 +746,7 @@ function handle_leftArrow_press() {
         func()
     })
     window.addEventListener("keydown", (e) => {
-        if (e.key == "ArrowLeft") {
+        if (e.key == "ArrowLeft" && !e.ctrlKey) {
             splashButton(PREV_BUTTON)
             func()
         }
@@ -704,8 +763,48 @@ function handle_rightArrow_press() {
         func()
     })
     window.addEventListener("keydown", (e) => {
-        if (e.key == "ArrowRight") {
+        if (e.key == "ArrowRight" && !e.ctrlKey) {
             splashButton(NEXT_BUTTON)
+            func()
+        }
+    })
+}
+
+function handle_ctrl_rightArrow_press() {
+    function func() {
+        currentFilter = nextFilter()
+        appendFilter()
+        setFilter()
+        currentWord = LIBRARY[0]
+        appendWord(currentWord[mode])
+        showLattin()
+    }
+    NEXT_FILTER.addEventListener("click", () => {
+        func()
+    })
+    window.addEventListener("keydown", (e) => {
+        if (e.key == "ArrowRight" && e.ctrlKey) {
+            splashButton(NEXT_FILTER)
+            func()
+        }
+    })
+}
+
+function handle_ctrl_leftArrow_press() {
+    function func() {
+        currentFilter = prevFilter()
+        appendFilter()
+        setFilter()
+        currentWord = LIBRARY[0]
+        appendWord(currentWord[mode])
+        showLattin()
+    }
+    PREV_FILTER.addEventListener("click", () => {
+        func()
+    })
+    window.addEventListener("keydown", (e) => {
+        if (e.key == "ArrowLeft" && e.ctrlKey) {
+            splashButton(PREV_FILTER)
             func()
         }
     })
@@ -730,11 +829,14 @@ function closeModal() {
 
 function run() {
     appendWord(currentWord[mode])
+    appendFilter()
     handle_showLattin_press()
     handle_mode_press()
     handle_random_press()
     handle_leftArrow_press()
     handle_rightArrow_press()
+    handle_ctrl_rightArrow_press()
+    handle_ctrl_leftArrow_press()
     openModal()
     closeModal()
 }

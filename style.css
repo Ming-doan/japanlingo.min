@@ -46,6 +46,32 @@ body {
     align-items: center;
 }
 
+.hoz-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hoz-content {
+    flex: 1;
+    margin: 0 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hoz-left,
+.hoz-right {
+    width: 80px !important;
+}
+
 .action {
     display: flex;
     justify-content: center;
@@ -159,6 +185,8 @@ body {
     cursor: pointer;
     user-select: none;
     margin-bottom: -50px;
+    position: fixed;
+    inset: 0 0 auto 0;
 }
 
 .flex {
