@@ -314,12 +314,12 @@ const GEN_LIBRARY = [
     {
         hiragana: 'で',
         katakana: 'デ',
-        romaji: 'ze'
+        romaji: 'de'
     },
     {
         hiragana: 'ど',
         katakana: 'ド',
-        romaji: 'zo'
+        romaji: 'do'
     },
     // B
     {
@@ -536,7 +536,7 @@ const GEN_LIBRARY = [
     },
     // âm ghép P
     {
-        hiragana: 'ぴょ',
+        hiragana: 'ぴゃ',
         katakana: 'ピャ',
         romaji: 'pya'
     },
@@ -559,8 +559,8 @@ const FILTER = [
         items: "nofilter"
     },
     {
-        name: "Vowels",
-        items: ["a", "i", "u", "e", "o"]
+        name: "Single",
+        items: ["a", "i", "u", "e", "o", "n,m"]
     },
     {
         name: "K sets",
@@ -568,7 +568,98 @@ const FILTER = [
     },
     {
         name: "S sets",
-        items: ["sa", "shi", "tsu", "se", "so"]
+        items: ["sa", "shi", "su", "se", "so"]
+    },
+    {
+        name: "T sets",
+        items: ["ta", "chi", "tsu", "te", "to"]
+    },
+    {
+        name: "N sets",
+        items: ["na", "ni", "nu", "ne", "no"]
+    },
+    {
+        name: "H sets",
+        items: ["ha", "hi", "fu", "he", "ho"]
+    },
+    {
+        name: "M sets",
+        items: ["ma", "mi", "mu", "me", "mo"]
+    },
+    {
+        name: "Y sets",
+        items: ["ya", "yu", "yo"]
+    },
+    {
+        name: "R sets",
+        items: ["ra", "ri", "ru", "re", "ro"]
+    },
+    {
+        name: "W sets",
+        items: ["wa"]
+    },
+    {
+        name: "G sets",
+        items: ["ga", "gi", "gu", "ge", "go"]
+    },
+    {
+        name: "Z sets",
+        items: ["za", "ji", "zu", "ze", "zo"]
+    },
+    {
+        name: "D sets",
+        items: ["da", "ji", "zu", "de", "do"]
+    },
+    {
+        name: "B sets",
+        items: ["ba", "bi", "bu", "be", "bo"]
+    },
+    {
+        name: "P sets",
+        items: ["pa", "pi", "pu", "pe", "po"]
+    },
+    {
+        name: "Ky sets",
+        items: ["kya", "kyu", "kyo"]
+    },
+    {
+        name: "Sh sets",
+        items: ["sha", "shu", "sho"]
+    },
+    {
+        name: "Ch sets",
+        items: ["cha", "chu", "cho"]
+    },
+    {
+        name: "Ny sets",
+        items: ["nya", "nyu", "nyo"]
+    },
+    {
+        name: "Hy sets",
+        items: ["hya", "hyu", "hyo"]
+    },
+    {
+        name: "My sets",
+        items: ["mya", "myu", "myo"]
+    },
+    {
+        name: "Ry sets",
+        items: ["rya", "ryu", "ryo"]
+    },
+    {
+        name: "Gy sets",
+        items: ["gya", "gyu", "gyo"]
+    },
+    {
+        name: "J sets",
+        items: ["ja", "ju", "jo"]
+    },
+    {
+        name: "By sets",
+        items: ["bya", "byu", "byo"]
+    }, {
+        name: "Py sets",
+        items: ["pya", "pyu", "pyo"]
     },
 ]
 
