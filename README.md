@@ -13,4 +13,4 @@
 ---
 
 ### View project on
-`https://ming-doan.github.io/japanlingo.min/`
+[This link](https://ming-doan.github.io/japanlingo.min/)
